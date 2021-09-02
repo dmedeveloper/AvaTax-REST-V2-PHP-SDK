@@ -12,6 +12,8 @@ final class AvaTaxClientTest extends TestCase
      */
     public function testConstructorThrowsExceptionForMissingRequirements()
     {
+        $this->expectException(Exception::class);
+
         new Avalara\AvaTaxClient('', '', '', '');
     }
     
