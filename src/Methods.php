@@ -5860,7 +5860,7 @@ class AvaTaxClient extends AvaTaxClientBase
      * @param string $tagName Tag Name on the basis of which you want to filter Items
      * @return FetchResult
      */
-    public function listItemsByCompany($companyId, $filter=null, $include=null, $top=null, $skip=null, $orderBy=null, $tagName)    {
+    public function listItemsByCompany($companyId, $filter=null, $include=null, $top=null, $skip=null, $orderBy=null, $tagName=null)    {
         $path = "/api/v2/companies/{$companyId}/items";
         $guzzleParams = [
             'query' => ['$filter' => $filter, '$include' => $include, '$top' => $top, '$skip' => $skip, '$orderBy' => $orderBy, 'tagName' => $tagName],
